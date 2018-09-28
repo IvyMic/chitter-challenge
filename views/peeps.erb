@@ -1,0 +1,12 @@
+<ul>
+  <% @peeps.each do |peep| %>
+    <li><p><%= peep[:text] %></p>
+        <p><%= "peep was made at: #{peep[:created_at]}"%></p>
+    </li>
+  <% end %>
+</ul>
+
+<form action="/peeps" method="post">
+	<input type="text" placeholder="post your tweet" name="peep_to_add">
+	<input type="submit" value="Add Peep">
+</form>
