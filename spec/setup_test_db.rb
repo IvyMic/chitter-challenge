@@ -13,11 +13,4 @@ module SetupDB
     connection.exec("INSERT INTO peeps (text, created_at) VALUES ('test2', null);")  
   end
 
-  def self.chronological_order_helper
-    connection = PG.connect(dbname: 'chitter_test')
-    connection.exec("INSERT INTO peeps (text, created_at) VALUES ('test', null);")  
-    connection.exec("INSERT INTO peeps (text, created_at) VALUES ('test1', null);") 
-  end
-
-
 end
